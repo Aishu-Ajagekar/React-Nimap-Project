@@ -114,11 +114,23 @@
 
 .movie-title {
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* show only 2 lines */
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  min-height: 3rem; /* ensures space for 2 lines even if short */
+  min-height: 3rem;
+}
+
+.card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.card a:hover {
+  text-decoration: none;
+  color: inherit;
 }
 
 @media (max-width: 768px) {

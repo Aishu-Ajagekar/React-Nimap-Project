@@ -1,4 +1,4 @@
-// src/pages/Home.jsx
+
 import React, { useEffect, useState } from 'react';
 import { getPopularMovies } from '../api';
 import MovieList from '../components/MovieList';

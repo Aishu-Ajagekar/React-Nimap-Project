@@ -1,5 +1,5 @@
-// src/components/MovieCard.jsx
-import React from "react";
+
+
 import { Link } from "react-router-dom";
 import { IMAGE_BASE_URL } from "../api";
 

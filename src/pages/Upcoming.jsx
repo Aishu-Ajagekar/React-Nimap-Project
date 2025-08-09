@@ -1,4 +1,4 @@
-// src/pages/Upcoming.jsx
+
 import React, { useEffect, useState } from 'react';
 import { getUpcomingMovies } from '../api';
 import MovieList from '../components/MovieList';

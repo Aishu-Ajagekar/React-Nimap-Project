@@ -1,4 +1,4 @@
-// src/pages/TopRated.jsx
+
 import React, { useEffect, useState } from 'react';
 import { getTopRatedMovies } from '../api';
 import MovieList from '../components/MovieList';
