@@ -14,7 +14,7 @@ const MovieCard = ({ movie }) => {
         />
       </Link>
       <div className="card-body">
-        <h5 className="card-title">{movie.title}</h5>
+        <h6 className="card-title movie-title">{movie.title}</h6>
 
         {/* ✅ Show rating */}
         <p className="card-text">

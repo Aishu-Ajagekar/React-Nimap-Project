@@ -112,6 +112,15 @@
   font-weight: 600;
 }
 
+.movie-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* show only 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 3rem; /* ensures space for 2 lines even if short */
+}
+
 @media (max-width: 768px) {
   .movie-hero {
     height: 60vh;
