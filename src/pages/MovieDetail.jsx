@@ -1,4 +1,3 @@
-// src/pages/MovieDetail.jsx
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getMovieDetails, getMovieCast, IMAGE_BASE_URL } from '../api';
@@ -18,18 +17,26 @@ const MovieDetail = () => {
 
   return (
     <div className="movie-detail">
-      <div className="movie-header">
-        <img src={IMAGE_BASE_URL + movie.poster_path} alt={movie.title} />
-        <div className="movie-info">
-          <h1>{movie.title}</h1>
-          <p>{movie.overview}</p>
-          <p>Release Date: {movie.release_date}</p>
-          <p>Rating: {movie.vote_average}</p>
+      <div
+        className="movie-hero"
+        style={{
+          backgroundImage: `url(${IMAGE_BASE_URL + (movie.backdrop_path || movie.poster_path)})`,
+        }}
+      >
+        <div className="movie-hero-overlay">
+          <div className="movie-info">
+            <h1>{movie.title}</h1>
+            <p>{movie.overview}</p>
+            <p><strong>Release Date:</strong> {movie.release_date}</p>
+            <p><strong>Rating:</strong> {movie.vote_average}</p>
+          </div>
         </div>
       </div>
 
-      <h3>Cast</h3>
-      <CastList cast={cast.slice(0, 10)} /> {/* Show only top 10 cast */}
+      <div className="cast-section">
+        <h3>Cast ({cast?.length})</h3>
+        <CastList cast={cast} />
+      </div>
     </div>
   );
 };
