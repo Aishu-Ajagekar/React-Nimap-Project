@@ -6,6 +6,7 @@ import TopRated from './pages/TopRated';
 import Upcoming from './pages/Upcoming';
 import MovieDetail from './pages/MovieDetail';
 import Search from './pages/Search';
+import './App.css';
 
 const App = () => (
   <Router>
